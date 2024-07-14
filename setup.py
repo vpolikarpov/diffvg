@@ -68,7 +68,7 @@ class Build(build_ext):
             super().build_extension(ext)
 
 torch_spec = importlib.util.find_spec("torch")
-tf_spec = importlib.util.find_spec("tensorflow")
+tf_spec = None
 packages = []
 build_with_cuda = False
 if torch_spec is not None:
